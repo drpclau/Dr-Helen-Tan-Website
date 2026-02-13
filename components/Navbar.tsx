@@ -3,7 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_ITEMS } from '../constants';
 import { Menu, X } from 'lucide-react';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onNavigate: (page: 'home' | 'legal', targetId?: string) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -15,6 +19,13 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    // Navigate to home and pass the target section ID
+    onNavigate('home', href);
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -25,7 +36,14 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-2xl font-serif italic font-bold tracking-tighter text-white z-50 relative">
+        <a 
+            href="#" 
+            onClick={(e) => {
+                e.preventDefault();
+                onNavigate('home');
+            }}
+            className="text-2xl font-serif italic font-bold tracking-tighter text-white z-50 relative"
+        >
           Dr. Helen Tan
         </a>
 
@@ -35,7 +53,8 @@ const Navbar: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm uppercase tracking-widest text-gray-300 hover:text-white transition-colors relative group"
+              onClick={(e) => handleNavClick(e, item.href)}
+              className="text-sm uppercase tracking-widest text-gray-300 hover:text-white transition-colors relative group cursor-pointer"
             >
               {item.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-eye-cyan transition-all duration-300 group-hover:w-full" />
@@ -65,7 +84,7 @@ const Navbar: React.FC = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className="text-2xl font-serif text-white hover:text-eye-cyan transition-colors"
                 >
                   {item.label}

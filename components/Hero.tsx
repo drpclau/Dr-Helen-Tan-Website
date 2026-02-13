@@ -3,6 +3,21 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+        const navbarHeight = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - navbarHeight;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-eye-dark">
       {/* Background Image Container */}
@@ -79,13 +94,15 @@ const Hero: React.FC = () => {
           >
             <a
               href="#conditions"
-              className="px-8 py-4 bg-white text-eye-dark font-semibold rounded-full hover:bg-gray-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] min-w-[180px] text-center"
+              onClick={(e) => handleScrollTo(e, '#conditions')}
+              className="px-8 py-4 bg-white text-eye-dark font-semibold rounded-full hover:bg-gray-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)] min-w-[180px] text-center cursor-pointer"
             >
               Treatments
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 bg-transparent border border-white/20 text-white font-semibold rounded-full hover:bg-white/5 transition-colors backdrop-blur-sm min-w-[180px] text-center"
+              onClick={(e) => handleScrollTo(e, '#contact')}
+              className="px-8 py-4 bg-transparent border border-white/20 text-white font-semibold rounded-full hover:bg-white/5 transition-colors backdrop-blur-sm min-w-[180px] text-center cursor-pointer"
             >
               Book Visit
             </a>
@@ -99,7 +116,9 @@ const Hero: React.FC = () => {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30 animate-bounce z-10"
       >
-        <ArrowDown size={24} />
+        <a href="#conditions" onClick={(e) => handleScrollTo(e, '#conditions')} className="cursor-pointer block p-2">
+            <ArrowDown size={24} />
+        </a>
       </motion.div>
     </section>
   );
