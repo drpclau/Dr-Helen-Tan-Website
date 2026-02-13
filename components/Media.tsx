@@ -17,20 +17,50 @@ const Media: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 1. Bernama Article */}
             <motion.div 
                 whileHover={{ y: -5 }}
                 className="group cursor-pointer"
             >
-                <div className="relative aspect-video rounded-xl overflow-hidden mb-4">
-                    <img src="https://picsum.photos/600/400" alt="Video thumbnail" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <PlayCircle size={48} className="text-white" />
+                <a 
+                    href="https://www.bernama.com/bm/news.php?id=2284065" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block h-full flex flex-col"
+                >
+                    <div className="relative aspect-video rounded-xl overflow-hidden mb-4 border border-white/10 group-hover:border-eye-cyan/30 transition-colors">
+                        {/* Source Tag */}
+                        <div className="absolute top-3 left-3 z-20">
+                            <span className="bg-blue-600/90 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded border border-white/10 uppercase tracking-widest font-bold">
+                                Bernama
+                            </span>
+                        </div>
+
+                        <img 
+                            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop" 
+                            alt="Doctor examining patient" 
+                            className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
+                        />
+                        
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+                             <div className="flex items-center gap-2 text-white/90 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                <span className="text-xs font-bold border-b border-eye-cyan pb-0.5 text-eye-cyan">BACA ARTIKEL</span>
+                                <ExternalLink size={12} className="text-eye-cyan" />
+                           </div>
+                        </div>
                     </div>
-                </div>
-                <span className="text-xs text-eye-cyan font-bold tracking-wider uppercase">Video</span>
-                <h3 className="text-xl font-serif mt-2 group-hover:text-eye-cyan transition-colors">Understanding Cataracts</h3>
+                    
+                    <span className="text-xs text-eye-cyan font-bold tracking-wider uppercase">Berita Terkini</span>
+                    <h3 className="text-xl font-serif mt-2 mb-3 group-hover:text-eye-cyan transition-colors leading-snug">
+                        Rawatan Mata Moden & Penjagaan Kesihatan
+                    </h3>
+                    <p className="text-sm text-gray-400 leading-relaxed line-clamp-3">
+                        Ketahui lebih lanjut mengenai perkembangan terkini dalam bidang oftalmologi dan rawatan mata di Malaysia.
+                    </p>
+                </a>
             </motion.div>
 
+             {/* 2. Sinar Daily Article */}
              <motion.div 
                 whileHover={{ y: -5 }}
                 className="group cursor-pointer"
@@ -73,6 +103,7 @@ const Media: React.FC = () => {
                 </a>
             </motion.div>
 
+            {/* 3. Interview */}
             <motion.div 
                 whileHover={{ y: -5 }}
                 className="group cursor-pointer"

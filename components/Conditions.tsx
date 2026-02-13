@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CONDITIONS } from '../constants';
-import { Activity, Eye, Focus, ShieldAlert, Sparkles, Sun } from 'lucide-react';
+import { Activity, Eye, Focus, Droplets, Sparkles, Sun } from 'lucide-react';
 
-const icons = [Sun, Focus, Activity, Sparkles, ShieldAlert, Eye];
+const icons = [Sun, Focus, Activity, Sparkles, Droplets, Eye];
 
 const Conditions: React.FC = () => {
   return (

@@ -28,8 +28,8 @@ export const CONDITIONS: Condition[] = [
     description: 'Specialized care for pediatric conditions including progressive Myopia management.',
   },
   {
-    title: 'Eye Trauma',
-    description: 'Urgent and reconstructive care for injuries affecting the eye and surrounding structures.',
+    title: 'Dry Eye',
+    description: 'Diagnosis and advanced management of dry eye syndrome to restore tear stability and alleviate ocular discomfort.',
   },
   {
     title: 'Pterygium',
@@ -49,11 +49,15 @@ export const PROCEDURES: Procedure[] = [
   },
   {
     title: 'Phacoemulsification',
-    description: 'Modern cataract surgery method using ultrasonic energy to emulsify the cataract lens.',
+    description: 'Advanced cataract surgery offering personalized vision restoration. We provide a range of premium Intraocular Lenses (IOLs) tailored to your specific lifestyle needs for optimal clarity.',
   },
   {
     title: 'ICL Implantation',
     description: 'Implantable Collamer Lens for high degrees of nearsightedness where laser surgery may not be suitable.',
+  },
+  {
+    title: 'Intense Pulsed Light (IPL) Therapy',
+    description: 'A cutting-edge, non-invasive treatment for chronic Dry Eye. It targets inflammation and Meibomian Gland Dysfunction (MGD) to effectively restore tear stability and comfort.',
   },
 ];
 
