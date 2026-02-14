@@ -74,6 +74,15 @@
 </script>
 </head>
   <body>
+    <!-- Hidden Netlify Form -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="interest"></select>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
