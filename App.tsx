@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import Conditions from './components/Conditions';
 import Procedures from './components/Procedures';
 import Media from './components/Media';
@@ -49,6 +50,7 @@ function App() {
         {currentPage === 'home' ? (
           <>
             <Hero />
+            <About />
             <Conditions />
             <Procedures />
             <Media />

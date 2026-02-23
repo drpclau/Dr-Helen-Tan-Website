@@ -80,10 +80,9 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-gray-200 leading-relaxed mb-12 font-light drop-shadow-md max-w-lg mx-auto md:mx-0"
+            className="text-lg md:text-xl text-gray-200 leading-relaxed mb-8 font-light drop-shadow-md max-w-xl mx-auto md:mx-0"
           >
-            Dr. Helen Tan brings world-class expertise in Cataract and Refractive Surgery,
-            dedicated to restoring your sight with gentle, advanced care.
+            Dr. Helen Tan is a Consultant Ophthalmologist with over 20 years of experience in advanced cataract and refractive surgery, dedicated to restoring vision through evidence-based care.
           </motion.p>
 
           <motion.div

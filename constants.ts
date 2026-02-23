@@ -74,7 +74,7 @@ export const SOCIAL_CONTRIBUTIONS: SocialContribution[] = [
   },
   {
     title: 'Global Outreach',
-    description: 'Volunteer surgeon with Doctors Without Borders for emergency eye trauma missions.',
-    date: '2019 - 2022'
+    description: 'Volunteer surgeon with Tzu Chi (TIMA) for outreach missions to Cambodia and Miri.',
+    date: '2019 - 2025'
   }
 ];
