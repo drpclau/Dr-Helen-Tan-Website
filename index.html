@@ -3,35 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Helen Tan | Ophthalmology</title>
+
+    <!-- PRIMARY SEO -->
+    <title>Dr. Helen Tan | Consultant Ophthalmologist | Cataract & Refractive Surgery KL</title>
+    <meta name="description" content="Dr. Helen Tan is a Consultant Ophthalmologist specialising in cataract surgery, SMILE Pro, LASIK, and refractive procedures. Serving patients at KPJ Centre For Sight KL, Rawang, and THONEH Petaling Jaya." />
+    <meta name="keywords" content="ophthalmologist KL, cataract surgery Malaysia, SMILE Pro KL, LASIK Malaysia, eye specialist Kuala Lumpur, refractive surgery Malaysia, Dr Helen Tan, KPJ Centre for Sight, glaucoma treatment KL, dry eye treatment Malaysia" />
+    <meta name="author" content="Dr. Helen Tan" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.drhelentan.com/" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.drhelentan.com/" />
+    <meta property="og:title" content="Dr. Helen Tan | Consultant Ophthalmologist | Cataract & Refractive Surgery" />
+    <meta property="og:description" content="Consultant Ophthalmologist with 20+ years experience in cataract surgery, SMILE Pro, and LASIK. PDPA-compliant practice. Serving KL, Rawang & Petaling Jaya." />
+    <meta property="og:image" content="https://www.drhelentan.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_MY" />
+    <meta property="og:site_name" content="Dr. Helen Tan Ophthalmology" />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dr. Helen Tan | Consultant Ophthalmologist" />
+    <meta name="twitter:description" content="Advanced cataract surgery, SMILE Pro, and LASIK in Kuala Lumpur. Book your consultation today." />
+    <meta name="twitter:image" content="https://www.drhelentan.com/og-image.jpg" />
+
+    <!-- STRUCTURED DATA — JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Helen Tan",
+      "url": "https://www.drhelentan.com",
+      "image": "https://i.imgur.com/XyzhtGf.jpeg",
+      "description": "Consultant Ophthalmologist specialising in cataract surgery, SMILE Pro, LASIK, and comprehensive eye care. MMC No: 38094.",
+      "medicalSpecialty": "Ophthalmology",
+      "telephone": "+601160659902",
+      "email": "helentanservices@gmail.com",
+      "identifier": [
+        { "@type": "PropertyValue", "name": "MMC", "value": "38094" },
+        { "@type": "PropertyValue", "name": "NSR", "value": "128327" }
+      ],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "MD (Universiti Sains Malaysia)" },
+        { "@type": "EducationalOccupationalCredential", "name": "MS Ophthalmology (Universiti Malaya)" },
+        { "@type": "EducationalOccupationalCredential", "name": "PgDip Cataract & Refractive Surgery, UK (Distinction)" },
+        { "@type": "EducationalOccupationalCredential", "name": "AM (Academy of Medicine, Malaysia)" }
+      ],
+      "location": [
+        {
+          "@type": "MedicalClinic",
+          "name": "KPJ Centre For Sight — Kuala Lumpur",
+          "address": { "@type": "PostalAddress", "streetAddress": "100-102 Level 4 Tawakkal Health Centre, 202A Jalan Pahang", "addressLocality": "Kuala Lumpur", "postalCode": "53000", "addressCountry": "MY" }
+        },
+        {
+          "@type": "MedicalClinic",
+          "name": "KPJ Centre For Sight — Rawang",
+          "address": { "@type": "PostalAddress", "streetAddress": "No 88, Jalan Bandar Rawang 1, Pusat Bandar Rawang", "addressLocality": "Rawang", "postalCode": "48000", "addressRegion": "Selangor", "addressCountry": "MY" }
+        },
+        {
+          "@type": "MedicalClinic",
+          "name": "The Tun Hussein Onn National Eye Hospital (THONEH)",
+          "address": { "@type": "PostalAddress", "streetAddress": "2, Lorong Utara (B), PJS 52", "addressLocality": "Petaling Jaya", "postalCode": "46200", "addressRegion": "Selangor", "addressCountry": "MY" }
+        }
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
+              sans: ['DM Sans', 'sans-serif'],
+              serif: ['Cormorant Garamond', 'serif'],
             },
             colors: {
-              'eye-dark': '#0a0a0c',
+              'eye-dark': '#08080a',
+              'eye-mid': '#111114',
+              'eye-panel': '#16161a',
               'eye-light': '#f4f4f5',
               'eye-blue': '#3b82f6',
               'eye-cyan': '#06b6d4',
+              'eye-gold': '#c8a96e',
               'eye-accent': '#818cf8',
             },
-            animation: {
-              'blob': 'blob 7s infinite',
-            },
+            animation: { 'blob': 'blob 7s infinite' },
             keyframes: {
               blob: {
-                '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                '0%': { transform: 'translate(0px,0px) scale(1)' },
+                '33%': { transform: 'translate(30px,-50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px,20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px,0px) scale(1)' }
               }
             }
           }
@@ -39,51 +107,42 @@
       }
     </script>
     <style>
-      body {
-        background-color: #0a0a0c;
-        color: #f4f4f5;
-        overflow-x: hidden;
-      }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0a0a0c;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
+      body { background-color: #08080a; color: #f4f4f5; overflow-x: hidden; }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #08080a; }
+      ::-webkit-scrollbar-thumb { background: #2a2a2e; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #444; }
+      .pdpa-submit:disabled { opacity: 0.38; cursor: not-allowed; pointer-events: none; }
+      .condition-prose h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 0.75rem; color: #f4f4f5; }
+      .condition-prose h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; color: #e2e8f0; }
+      .condition-prose p { color: #94a3b8; line-height: 1.75; margin-bottom: 1rem; }
+      .condition-prose ul { list-style: none; padding: 0; }
+      .condition-prose ul li { color: #94a3b8; padding: 0.3rem 0 0.3rem 1.5rem; position: relative; }
+      .condition-prose ul li::before { content: '→'; position: absolute; left: 0; color: #06b6d4; }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "framer-motion": "https://esm.sh/framer-motion@^12.33.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "framer-motion": "https://esm.sh/framer-motion@^12.33.0",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="/index.css">
+  </head>
   <body>
-    <!-- Hidden Netlify Form -->
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="firstName" />
       <input type="text" name="lastName" />
       <input type="email" name="email" />
       <input type="tel" name="phone" />
       <select name="interest"></select>
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="pdpaConsent" />
     </form>
-
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
